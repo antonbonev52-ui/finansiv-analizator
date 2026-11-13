@@ -1,0 +1,13 @@
+# Настройки за публикуване в Render.com (Blueprint).
+# В Render: New → Blueprint → изберете GitHub хранилището → Apply.
+services:
+  - type: web
+    name: finansov-analizator
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
